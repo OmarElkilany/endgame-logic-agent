@@ -1,6 +1,6 @@
 :- discontiguous ironMan/3.
 :- discontiguous stone/3.
-:- include('./KB1.pl').
+:- include('./KB.pl').
 
 ironMan(X, Y, result(A, S)):-
     ironMan(OldX, OldY, S),
@@ -11,10 +11,10 @@ ironMan(X, Y, result(A, S)):-
         );
         (
             (
-                A = right, OldX = X, Y is OldY + 1, Y < M;
+                A = right, OldX = X, Y is OldY + 1, Y < N;
                 A = up, OldY = Y, X is OldX - 1, X >= 0;
                 A = left, OldX = X, Y is OldY - 1, Y >= 0;
-                A = down, OldY = Y, X is OldX + 1, X < N
+                A = down, OldY = Y, X is OldX + 1, X < M
             ),
             (
                 \+ thanos(X, Y);
