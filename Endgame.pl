@@ -1,6 +1,6 @@
 :- discontiguous ironMan/3.
 :- discontiguous stone/3.
-:- include('./KB.pl').
+:- include('./KB2.pl').
 
 ironMan(X, Y, result(A, S)):-
     ironMan(OldX, OldY, S),
